@@ -1,0 +1,13 @@
+project: default
+source:
+  repoURL: 'https://github.com/ulrich-syncier/hello-world'
+  path: .
+  targetRevision: HEAD
+  helm:
+    valueFiles:
+      - values2.yaml
+destination:
+  server: 'https://kubernetes.default.svc'
+  namespace: default
+syncPolicy:
+  automated: {}
